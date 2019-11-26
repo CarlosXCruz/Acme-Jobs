@@ -19,6 +19,10 @@
        drop 
        foreign key FK_6cyha9f1wpj0dpbxrrjddrqed;
 
+    alter table `duty` 
+       drop 
+       foreign key `FK3cc3garl37bl7gswreqwr7pj4`;
+
     alter table `employer` 
        drop 
        foreign key FK_na4dfobmeuxkwf6p75abmb2tr;
@@ -26,6 +30,22 @@
     alter table `non_commercial_banner` 
        drop 
        foreign key FK_2l8gpcwh19e7jj513or4r9dvb;
+
+    alter table `job` 
+       drop 
+       foreign key `FKfqwyynnbcsq0htxho3vchpd2u`;
+
+    alter table `job` 
+       drop 
+       foreign key `FK3rxjf8uh6fh2u990pe8i2at0e`;
+
+    alter table `job_application` 
+       drop 
+       foreign key `FK5tcniavarhbbxc7sl99x3au6o`;
+
+    alter table `job_application` 
+       drop 
+       foreign key `FKccrwleo6webtpabw26oblobch`;
 
     alter table `provider` 
        drop 
@@ -57,9 +77,17 @@
 
     drop table if exists `consumer`;
 
+    drop table if exists `descriptor`;
+
+    drop table if exists `duty`;
+
     drop table if exists `employer`;
 
     drop table if exists `investor_record`;
+
+    drop table if exists `job`;
+
+    drop table if exists `job_application`;
 
     drop table if exists `non_commercial_banner`;
 

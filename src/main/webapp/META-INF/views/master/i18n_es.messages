@@ -56,6 +56,13 @@ master.menu.anonymous.top.investorRecord = Top de Registros de inversores
 # master.menu.authenticated.investorRecord #######################################################
 master.menu.authenticated.investorRecord.list = Lista de Registros de inversores
 
+# master.menu.authenticated.job #######################################################
+master.menu.authenticated.job.list = Lista de Trabajos
+
+# master.menu.employer #######################################################
+master.menu.employer = Empleador
+master.menu.employer.job.list = Lista de Trabajos
+
 # master.menu.administrator.Display #######################################################
 master.menu.administrator.adminDisplay = Display de Administrador
 master.menu.administrator.dashboard = Panel de control
