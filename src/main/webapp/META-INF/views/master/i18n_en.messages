@@ -115,6 +115,12 @@ master.menu.consumer = Consumer
 master.menu.consumer.favourite-link = Favourite link
 master.menu.consumer.offer.create = Create Offer
 
+# master.menu.sponsor ##########################################################
+
+master.menu.sponsor = Sponsor
+master.menu.sponsor.commercialBanner = Commercial Banner List
+master.menu.sponsor.nonCommercialBanner = Non Commercial Banner List
+
 # master.menu.user-account ####################################################
 
 master.menu.user-account = Account
