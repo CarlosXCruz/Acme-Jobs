@@ -11,13 +11,33 @@
        drop 
        foreign key FK_h52w0f3wjoi68b63wv9vwon57;
 
+    alter table `commercial_banner` 
+       drop 
+       foreign key FK_q9id3wc65gg49afc5tlr1c00n;
+
     alter table `consumer` 
        drop 
        foreign key FK_6cyha9f1wpj0dpbxrrjddrqed;
 
+    alter table `employer` 
+       drop 
+       foreign key FK_na4dfobmeuxkwf6p75abmb2tr;
+
+    alter table `non_commercial_banner` 
+       drop 
+       foreign key FK_2l8gpcwh19e7jj513or4r9dvb;
+
     alter table `provider` 
        drop 
        foreign key FK_b1gwnjqm6ggy9yuiqm0o4rlmd;
+
+    alter table `sponsor` 
+       drop 
+       foreign key FK_20xk0ev32hlg96kqynl6laie2;
+
+    alter table `worker` 
+       drop 
+       foreign key FK_l5q1f33vs2drypmbdhpdgwfv3;
 
     drop table if exists `administrator`;
 
@@ -37,6 +57,8 @@
 
     drop table if exists `consumer`;
 
+    drop table if exists `employer`;
+
     drop table if exists `investor_record`;
 
     drop table if exists `non_commercial_banner`;
@@ -47,6 +69,10 @@
 
     drop table if exists `request`;
 
+    drop table if exists `sponsor`;
+
     drop table if exists `user_account`;
+
+    drop table if exists `worker`;
 
     drop table if exists `hibernate_sequence`;

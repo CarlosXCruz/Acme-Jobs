@@ -99,6 +99,12 @@ master.menu.consumer = Consumidor
 master.menu.consumer.favourite-link = Enlace favorito
 master.menu.consumer.offer.create = Crear oferta
 
+# master.menu.sponsor ##########################################################
+
+master.menu.sponsor = Patrocinador
+master.menu.sponsor.commercialBanner = Lista Banners Comerciales
+master.menu.sponsor.nonCommercialBanner = Lista Banners No Comerciales
+
 # master.menu.authenticated.challenge #######################################################
 master.menu.authenticated.challenge = Retos
 master.menu.authenticated.challenge.list = Lista de Retos
