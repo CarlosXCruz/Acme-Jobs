@@ -96,21 +96,13 @@
         primary key (`id`)
     ) engine=InnoDB;
 
-
-    create table `descriptor` (
-       `id` integer not null,
-        `version` integer not null,
-        `description` varchar(255),
-        primary key (`id`)
-    ) engine=InnoDB;
-
     create table `duty` (
        `id` integer not null,
         `version` integer not null,
         `description` varchar(255),
         `percentage` double precision not null,
         `title` varchar(255),
-        `descriptor_id` integer not null,
+        `job_id` integer not null,
         primary key (`id`)
     ) engine=InnoDB;
 
@@ -137,13 +129,13 @@
        `id` integer not null,
         `version` integer not null,
         `deadline` datetime(6),
+        `description` varchar(255),
         `more_info` varchar(255),
         `reference_number` varchar(255),
         `salary_amount` double precision,
         `salary_currency` varchar(255),
         `status` varchar(255),
         `title` varchar(255),
-        `descriptor_id` integer not null,
         `employer_id` integer not null,
         primary key (`id`)
     ) engine=InnoDB;
@@ -256,9 +248,6 @@ create index IDX9pkce3d1y6w47wadap5s5xptc on `company_record` (`stars`);
 create index IDXk2t3uthe649ao1jllcuks0gv4 on `investor_record` (`stars`);
 
     alter table `job` 
-       add constraint UK_qpodqtu8nvqkof3olnqnqcv2l unique (`descriptor_id`);
-
-    alter table `job` 
        add constraint UK_bos0omdc9s5vykasqjhwaq65m unique (`reference_number`);
 
     alter table `job_application` 
@@ -301,25 +290,14 @@ create index IDXlrvsw21ylkdqa1shrkwg1yssx on `request` (`deadline`);
        references `user_account` (`id`);
 
     alter table `duty` 
-       add constraint `FK3cc3garl37bl7gswreqwr7pj4` 
-       foreign key (`descriptor_id`) 
-       references `descriptor` (`id`);
+       add constraint `FKs2uoxh4i5ya8ptyefae60iao1` 
+       foreign key (`job_id`) 
+       references `job` (`id`);
 
     alter table `employer` 
        add constraint FK_na4dfobmeuxkwf6p75abmb2tr 
        foreign key (`user_account_id`) 
        references `user_account` (`id`);
-
-
-    alter table `non_commercial_banner` 
-       add constraint FK_2l8gpcwh19e7jj513or4r9dvb 
-       foreign key (`sponsor_id`) 
-       references `sponsor` (`id`);
-
-    alter table `job` 
-       add constraint `FKfqwyynnbcsq0htxho3vchpd2u` 
-       foreign key (`descriptor_id`) 
-       references `descriptor` (`id`);
 
     alter table `job` 
        add constraint `FK3rxjf8uh6fh2u990pe8i2at0e` 
@@ -335,6 +313,11 @@ create index IDXlrvsw21ylkdqa1shrkwg1yssx on `request` (`deadline`);
        add constraint `FKccrwleo6webtpabw26oblobch` 
        foreign key (`worker_id`) 
        references `worker` (`id`);
+
+    alter table `non_commercial_banner` 
+       add constraint FK_2l8gpcwh19e7jj513or4r9dvb 
+       foreign key (`sponsor_id`) 
+       references `sponsor` (`id`);
 
     alter table `provider` 
        add constraint FK_b1gwnjqm6ggy9yuiqm0o4rlmd 

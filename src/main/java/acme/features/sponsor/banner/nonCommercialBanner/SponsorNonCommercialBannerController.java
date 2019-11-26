@@ -7,6 +7,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
 
+import acme.components.CustomCommand;
 import acme.entities.banners.NonCommercialBanner;
 import acme.entities.roles.Sponsor;
 import acme.framework.components.BasicCommand;
@@ -17,7 +18,7 @@ import acme.framework.controllers.AbstractController;
 public class SponsorNonCommercialBannerController extends AbstractController<Sponsor, NonCommercialBanner> {
 
 	@Autowired
-	private SponsorNonCommercialBannerListService	listService;
+	private SponsorNonCommercialBannerListService	listMineService;
 
 	@Autowired
 	private SponsorNonCommercialBannerShowService	showService;
@@ -25,7 +26,7 @@ public class SponsorNonCommercialBannerController extends AbstractController<Spo
 
 	@PostConstruct
 	private void initialise() {
-		super.addBasicCommand(BasicCommand.LIST, this.listService);
+		super.addCustomCommand(CustomCommand.LIST_MINE, BasicCommand.LIST, this.listMineService);
 		super.addBasicCommand(BasicCommand.SHOW, this.showService);
 	}
 
