@@ -10,7 +10,12 @@
 <acme:form-moment code="employer.job.form.label.deadline" path="deadline"/>
 <acme:form-double code="employer.job.form.label.salary" path="salary"/>
 <acme:form-textbox code="employer.job.form.label.moreInfo" path="moreInfo"/>
-<acme:form-textarea code="employer.job.form.label.description" path="descriptor.description"/>
+<acme:form-textarea code="employer.job.form.label.description" path="description"/>
+</acme:form>
 
+<a href = /acme-jobs/employer/duty/list?idJob=<jstl:out value="${id}"></jstl:out>>
+<acme:message code="employer.job.message.duties"/>
+</a>
+<acme:form>
 <acme:form-return code="autheticated.job.form.button.return"/>
 </acme:form>

@@ -97,8 +97,8 @@
 		
 		<acme:menu-option code="master.menu.sponsor" access="hasRole('Sponsor')">
 			<%-- <acme:menu-suboption code="master.menu.sponsor.favourite-link" action="http://www.example.com/"/> --%>
-			<acme:menu-suboption code="master.menu.sponsor.commercialBanner" action="/sponsor/commercial-banner/list"/>
-			<acme:menu-suboption code="master.menu.sponsor.nonCommercialBanner" action="/sponsor/non-commercial-banner/list"/>
+			<acme:menu-suboption code="master.menu.sponsor.commercialBanner" action="/sponsor/commercial-banner/list_mine"/>
+			<acme:menu-suboption code="master.menu.sponsor.nonCommercialBanner" action="/sponsor/non-commercial-banner/list_mine"/>
 		</acme:menu-option>
 	</acme:menu-left>
 

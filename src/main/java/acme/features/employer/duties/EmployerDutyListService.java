@@ -1,25 +1,28 @@
 
-package acme.features.employer.jobs;
+package acme.features.employer.duties;
+
+import java.util.Collection;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
+import acme.entities.jobs.Duty;
 import acme.entities.jobs.Job;
 import acme.entities.roles.Employer;
 import acme.framework.components.Model;
 import acme.framework.components.Request;
 import acme.framework.entities.Principal;
-import acme.framework.services.AbstractShowService;
+import acme.framework.services.AbstractListService;
 
 @Service
-public class EmployerJobShowService implements AbstractShowService<Employer, Job> {
+public class EmployerDutyListService implements AbstractListService<Employer, Duty> {
 
 	@Autowired
-	EmployerJobRepository repository;
+	EmployerDutyRepository repository;
 
 
 	@Override
-	public boolean authorise(final Request<Job> request) {
+	public boolean authorise(final Request<Duty> request) {
 		assert request != null;
 		boolean result;
 		int jobId;
@@ -27,7 +30,7 @@ public class EmployerJobShowService implements AbstractShowService<Employer, Job
 		Employer employer;
 		Principal principal;
 
-		jobId = request.getModel().getInteger("id");
+		jobId = request.getModel().getInteger("idJob");
 		job = this.repository.findOneById(jobId);
 		employer = job.getEmployer();
 		principal = request.getPrincipal();
@@ -36,22 +39,24 @@ public class EmployerJobShowService implements AbstractShowService<Employer, Job
 	}
 
 	@Override
-	public void unbind(final Request<Job> request, final Job entity, final Model model) {
+	public void unbind(final Request<Duty> request, final Duty entity, final Model model) {
 		assert request != null;
 		assert entity != null;
 		assert model != null;
-		request.unbind(entity, model, "referenceNumber", "status", "title", "deadline", "salary", "moreInfo", "description", "id");
+
+		request.unbind(entity, model, "title", "description", "percentage", "job.referenceNumber", "job.description", "job.title", "job.salary");
 
 	}
 
 	@Override
-	public Job findOne(final Request<Job> request) {
+	public Collection<Duty> findMany(final Request<Duty> request) {
 		assert request != null;
-		Job result;
-		int id;
-		id = request.getModel().getInteger("id");
-		result = this.repository.findOneById(id);
-		return result;
+		int idJob = request.getModel().getInteger("idJob");
+
+		Collection<Duty> res;
+		res = this.repository.findMany(idJob);
+		return res;
+
 	}
 
 }

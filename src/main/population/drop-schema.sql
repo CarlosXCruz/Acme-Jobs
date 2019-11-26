@@ -21,19 +21,11 @@
 
     alter table `duty` 
        drop 
-       foreign key `FK3cc3garl37bl7gswreqwr7pj4`;
+       foreign key `FKs2uoxh4i5ya8ptyefae60iao1`;
 
     alter table `employer` 
        drop 
        foreign key FK_na4dfobmeuxkwf6p75abmb2tr;
-
-    alter table `non_commercial_banner` 
-       drop 
-       foreign key FK_2l8gpcwh19e7jj513or4r9dvb;
-
-    alter table `job` 
-       drop 
-       foreign key `FKfqwyynnbcsq0htxho3vchpd2u`;
 
     alter table `job` 
        drop 
@@ -46,6 +38,10 @@
     alter table `job_application` 
        drop 
        foreign key `FKccrwleo6webtpabw26oblobch`;
+
+    alter table `non_commercial_banner` 
+       drop 
+       foreign key FK_2l8gpcwh19e7jj513or4r9dvb;
 
     alter table `provider` 
        drop 
@@ -76,8 +72,6 @@
     drop table if exists `configuration`;
 
     drop table if exists `consumer`;
-
-    drop table if exists `descriptor`;
 
     drop table if exists `duty`;
 

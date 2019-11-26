@@ -10,6 +10,7 @@ import acme.entities.jobs.Job;
 import acme.entities.roles.Employer;
 import acme.framework.components.Model;
 import acme.framework.components.Request;
+import acme.framework.entities.Principal;
 import acme.framework.services.AbstractListService;
 
 @Service
@@ -38,9 +39,9 @@ public class EmployerJobListMineService implements AbstractListService<Employer,
 	public Collection<Job> findMany(final Request<Job> request) {
 		assert request != null;
 		Collection<Job> res;
-		int idUserAccount = request.getPrincipal().getAccountId();
-		int idEmployer = this.repository.findEmployerId(idUserAccount);
-		res = this.repository.findManyMine(idEmployer);
+		Principal principal;
+		principal = request.getPrincipal();
+		res = this.repository.findManyMine(principal.getActiveRoleId());
 		return res;
 	}
 

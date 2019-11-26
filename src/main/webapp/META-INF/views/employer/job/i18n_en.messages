@@ -10,3 +10,5 @@ employer.job.form.label.salary = Salary
 employer.job.form.label.moreInfo = More Info
 employer.job.form.label.description = Description
 employer.job.form.button.return = Return
+
+employer.job.message.duties = See the Duties of the Job
