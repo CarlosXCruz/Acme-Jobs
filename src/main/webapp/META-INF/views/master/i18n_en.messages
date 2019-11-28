@@ -70,6 +70,7 @@ master.menu.worker = Worker
 # master.menu.administrator.Display #######################################################
 master.menu.administrator.adminDisplay = Admin Display
 master.menu.administrator.dashboard = Dashboard
+master.menu.administrator.dashboardJob = Job Dashboard
 master.menu.administrator.customParams = Customisation Parameters
 
 

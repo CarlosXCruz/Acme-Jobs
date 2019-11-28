@@ -69,6 +69,7 @@ master.menu.worker = Trabajador
 
 # master.menu.administrator.Display #######################################################
 master.menu.administrator.adminDisplay = Display de Administrador
+master.menu.administrator.dashboardJob = Display de Administrador de Trabajos
 master.menu.administrator.dashboard = Panel de control
 master.menu.administrator.customParams = Parámetros de Customización
 
