@@ -458,5 +458,35 @@
 		<property name="userAccount" ref="SponsorUserAccount2" />
 	</bean>
 
+	<bean name="Auditor1UserAccount" class="acme.framework.entities.UserAccount">
+		<property name="username" value="auditor1" />
+		<property name="password" value="auditor1" />
+		<property name="enabled" value="true" />
+		<property name="identity">
+			<bean class="acme.datatypes.UserIdentity">
+				<property name="name" value="Audii" />
+				<property name="surname" value="Thor" />
+				<property name="email" value="audii.thor@acme.com" />
+			</bean>
+		</property>
+		<property name="roles">
+			<list>
+				<ref bean = "Auditor01"/>
+				<ref bean="Auditor1Authenticated" />
+			</list>
+		</property>
+	</bean>
+	
+	<bean id = "Auditor01" class = "acme.entities.roles.Auditor">
+	<property name = "firm" value = "auditor1"/>
+	<property name = "statement" value = "auditor1"/>
+	<property name = "userAccount" ref = "Auditor1UserAccount"/>
+	</bean>
+	
+	<bean name = "Auditor1Authenticated" class = "acme.framework.entities.Authenticated">
+	<property name = "userAccount" ref = "Auditor1UserAccount"></property>
+	</bean>
+	
+
 </beans>
 
