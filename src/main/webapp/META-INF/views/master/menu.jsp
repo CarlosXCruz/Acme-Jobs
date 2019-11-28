@@ -63,6 +63,7 @@
 			<acme:menu-suboption code="master.menu.administrator.user-accounts" action="/administrator/user-account/list"/>
 			<acme:menu-separator/>
 			<acme:menu-suboption code="master.menu.administrator.dashboard" action="/administrator/dashboard/list"/>
+			<acme:menu-suboption code="master.menu.administrator.dashboardJob" action="/administrator/dashboard-job/display"/>
 			<acme:menu-suboption code="master.menu.administrator.customParams" action="/administrator/custom-params/show"/>
 			<acme:menu-separator/>
 			<acme:menu-suboption code="master.menu.administrator.announcements.list" action="/administrator/announcement/list"/>
