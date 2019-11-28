@@ -49,7 +49,7 @@ public class AuthenticatedDutyListService implements AbstractListService<Authent
 		assert entity != null;
 		assert model != null;
 
-		request.unbind(entity, model, "title", "description", "percentage", "job.referenceNumber", "job.description", "job.title", "job.salary");
+		request.unbind(entity, model, "title", "description", "percentage");
 
 	}
 
