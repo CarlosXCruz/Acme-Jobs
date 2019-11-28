@@ -35,6 +35,7 @@ public class JobApplication extends DomainEntity {
 	private Date				creationMoment;
 
 	@NotBlank
+	@Pattern(regexp = "^(pending|accepted|rejected)$")
 	private String				status;
 
 	@NotBlank

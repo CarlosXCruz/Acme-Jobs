@@ -121,6 +121,34 @@
 	<property name = "userAccount" ref = "worker1UserAccount"></property>
 	</bean>
 	
+	<bean name="worker2UserAccount" class="acme.framework.entities.UserAccount">
+		<property name="username" value="worker2" />
+		<property name="password" value="worker2" />
+		<property name="enabled" value="true" />
+		<property name="identity">
+			<bean class="acme.datatypes.UserIdentity">
+				<property name="name" value="Paco" />
+				<property name="surname" value="Arroyo" />
+				<property name="email" value="pacoe@acme.com" />
+			</bean>
+		</property>
+		<property name="roles">
+			<list>
+				<ref bean = "worker02"/>
+				<ref bean="worker2Authenticated" />
+			</list>
+		</property>
+	</bean>
+	
+	<bean id = "worker02" class = "acme.entities.roles.Worker">
+	<property name = "qualifications" value = "españa"/>
+	<property name = "skills" value = "skills1, skills2, skills3"/>
+	<property name = "userAccount" ref = "worker2UserAccount"/>
+	</bean>
+	
+	<bean name = "worker2Authenticated" class = "acme.framework.entities.Authenticated">
+	<property name = "userAccount" ref = "worker2UserAccount"></property>
+	</bean>	
 	
 	<bean id = "job01" class = "acme.entities.jobs.Job">
 	<property name = "referenceNumber" value = "EEEE-JJJJ"/>
@@ -146,13 +174,35 @@
 	
 	<bean id = "jobapp01" class = "acme.entities.jobApplication.JobApplication">
 	<property name = "referenceNumber" value = "EEEE-JJJJ:WWWW"/>
-	<property name = "creationMoment" value = "2030/12/31 10:00"/>
+	<property name = "creationMoment" value = "2018/12/31 10:00"/>
 	<property name = "status" value = "pending"/>
 	<property name = "statement" value = "abc"/>
 	<property name = "skills" value = "skills"/>
 	<property name = "qualifications" value = "qsad"/>
 	<property name = "worker" ref = "worker01"/>
 	<property name = "job" ref = "job01"/>
+	</bean>
+	
+	<bean id = "jobapp02" class = "acme.entities.jobApplication.JobApplication">
+	<property name = "referenceNumber" value = "EEEE-JJJJ:WWRR"/>
+	<property name = "creationMoment" value = "2019/10/21 10:00"/>
+	<property name = "status" value = "pending"/>
+	<property name = "statement" value = "afawfdbc"/>
+	<property name = "skills" value = "skilfawfals"/>
+	<property name = "qualifications" value = "qsafwafad"/>
+	<property name = "worker" ref = "worker02"/>
+	<property name = "job" ref = "job02"/>
+	</bean>
+	
+	<bean id = "jobapp03" class = "acme.entities.jobApplication.JobApplication">
+	<property name = "referenceNumber" value = "EEEE-JJJJ:WWTT"/>
+	<property name = "creationMoment" value = "2019/02/24 10:00"/>
+	<property name = "status" value = "accepted"/>
+	<property name = "statement" value = "afawfdbc"/>
+	<property name = "skills" value = "skilfawfals"/>
+	<property name = "qualifications" value = "qsafwafad"/>
+	<property name = "worker" ref = "worker02"/>
+	<property name = "job" ref = "job02"/>
 	</bean>
   
   <bean id="companyrecord01" class="acme.entities.companyRecords.CompanyRecord">

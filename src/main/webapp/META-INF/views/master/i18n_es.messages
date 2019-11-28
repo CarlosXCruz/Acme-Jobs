@@ -62,6 +62,10 @@ master.menu.authenticated.job.list = Lista de Trabajos
 # master.menu.employer #######################################################
 master.menu.employer = Empleador
 master.menu.employer.job.list = Lista de Trabajos
+master.menu.employer.jobApplication.list = Lista de Solicitudes de Trabajo
+
+# master.menu.worker #######################################################
+master.menu.worker = Trabajador
 
 # master.menu.administrator.Display #######################################################
 master.menu.administrator.adminDisplay = Display de Administrador
