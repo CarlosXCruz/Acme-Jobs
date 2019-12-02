@@ -72,6 +72,7 @@
 	<bean name="administratorAuthenticated" class="acme.framework.entities.Authenticated">
 		<property name="userAccount" ref="administratorUserAccount" />
 	</bean>
+	
 	<!--  Custom Params -->
 	
 	<bean id = "configParams" class = "acme.entities.customParams.Configuration">

@@ -1,0 +1,11 @@
+authenticated.duty.job.form.label.referenceNumber = Número de Referencia
+authenticated.duty.job.form.label.title = Título
+authenticated.duty.job.form.label.description = Descripción
+authenticated.duty.job.form.label.salary = Salario
+
+authenticated.duty.list.label.title = Título
+authenticated.duty.list.label.description = Descripción
+authenticated.duty.list.label.percentage = Porcentaje de trabajo por semana
+authenticated.duty.form.button.return = Volver
+
+authenticated.duty.message.job = Trabajo relacionado con las obligaciones

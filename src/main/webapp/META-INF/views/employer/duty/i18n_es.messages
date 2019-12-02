@@ -1,0 +1,11 @@
+employer.duty.job.form.label.referenceNumber = Número de Referencia
+employer.duty.job.form.label.title = Título
+employer.duty.job.form.label.description = Descripción
+employer.duty.job.form.label.salary = Salario
+
+employer.duty.list.label.title = Título
+employer.duty.list.label.description = Descripción
+employer.duty.list.label.percentage = Porcentaje de trabajo por semana
+employer.duty.form.button.return = Volver
+
+employer.duty.message.job = Trabajo relacionado con las obligaciones

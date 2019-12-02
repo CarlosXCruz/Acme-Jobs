@@ -42,6 +42,18 @@
 			<acme:menu-suboption code="master.menu.authenticated.offer.list" action="/authenticated/offer/list"/>
 			<acme:menu-suboption code="master.menu.authenticated.message.list" action="/authenticated/message/list"/>
 			<acme:menu-suboption code="master.menu.authenticated.messagethread.list" action="/authenticated/message-thread/list"/>
+			<acme:menu-separator/>
+			<acme:menu-suboption code="master.menu.authenticated.job.list" action="/authenticated/job/list"/>
+			
+		</acme:menu-option>
+		
+		<acme:menu-option code="master.menu.employer" access="hasRole('Employer')">
+		<acme:menu-suboption code="master.menu.employer.job.list" action="/employer/job/list_mine"/>
+		<acme:menu-suboption code="master.menu.employer.jobApplication.list" action="/employer/job-application/list_mine"/>
+		</acme:menu-option>
+		
+		<acme:menu-option code="master.menu.worker" access="hasRole('Worker')">
+		<acme:menu-suboption code="master.menu.employer.jobApplication.list" action="/worker/job-application/list_mine"/>
 		</acme:menu-option>
 	
         
@@ -53,6 +65,7 @@
 			<acme:menu-suboption code="master.menu.administrator.user-accounts" action="/administrator/user-account/list"/>
 			<acme:menu-separator/>
 			<acme:menu-suboption code="master.menu.administrator.dashboard" action="/administrator/dashboard/list"/>
+			<acme:menu-suboption code="master.menu.administrator.dashboardJob" action="/administrator/dashboard-job/display"/>
 			<acme:menu-suboption code="master.menu.administrator.customParams" action="/administrator/custom-params/show"/>
 			<acme:menu-separator/>
 			<acme:menu-suboption code="master.menu.administrator.announcements.list" action="/administrator/announcement/list"/>
@@ -89,7 +102,23 @@
 			<%-- <acme:menu-suboption code="master.menu.consumer.favourite-link" action="http://www.example.com/"/> --%>
 			<acme:menu-suboption code="master.menu.consumer.offer.create" action="/consumer/offer/create"/>
 		</acme:menu-option>
+		
+		<acme:menu-option code="master.menu.sponsor" access="hasRole('Sponsor')">
+			<%-- <acme:menu-suboption code="master.menu.sponsor.favourite-link" action="http://www.example.com/"/> --%>
+			<acme:menu-suboption code="master.menu.sponsor.commercialBanner" action="/sponsor/commercial-banner/list_mine"/>
+			<acme:menu-suboption code="master.menu.sponsor.nonCommercialBanner" action="/sponsor/non-commercial-banner/list_mine"/>
+		</acme:menu-option>
+		
+		<acme:menu-option code="master.menu.auditor" access="hasRole('Auditor')">
+			
+			<acme:menu-suboption code="master.menu.auditor.jobAudited" action="/auditor/jobAudited/list"/>
+			<acme:menu-suboption code="master.menu.auditor.jobNoAudited" action="/auditor/jobNoAudited/list"/>
+			
+		</acme:menu-option>
+		
 	</acme:menu-left>
+	
+	
 
 	<acme:menu-right>
 		<acme:menu-option code="master.menu.sign-up" action="/anonymous/user-account/create" access="isAnonymous()"/>

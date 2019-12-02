@@ -55,9 +55,22 @@ master.menu.authenticated.investorRecord.list = List Investor Records
 # master.menu.authenticated.Requests #######################################################
 master.menu.authenticated.request.list = List Requests
 
+# master.menu.authenticated.job #######################################################
+master.menu.authenticated.job.list = List Jobs
+
+
+# master.menu.employer#######################################################
+master.menu.employer = Employer
+master.menu.employer.job.list = List Jobs
+master.menu.employer.jobApplication.list = List Job Applications
+
+# master.menu.worker#######################################################
+master.menu.worker = Worker
+
 # master.menu.administrator.Display #######################################################
 master.menu.administrator.adminDisplay = Admin Display
 master.menu.administrator.dashboard = Dashboard
+master.menu.administrator.dashboardJob = Job Dashboard
 master.menu.administrator.customParams = Customisation Parameters
 
 
@@ -108,6 +121,18 @@ master.menu.authenticated.offer.list= List Offers
 master.menu.consumer = Consumer
 master.menu.consumer.favourite-link = Favourite link
 master.menu.consumer.offer.create = Create Offer
+
+# master.menu.sponsor ##########################################################
+
+master.menu.sponsor = Sponsor
+master.menu.sponsor.commercialBanner = Commercial Banner List
+master.menu.sponsor.nonCommercialBanner = Non Commercial Banner List
+
+# master.menu.auditor ##########################################################
+
+master.menu.auditor = Auditor
+master.menu.auditor.jobAudited = Job audited
+master.menu.auditor.jobNoAudited = Job No audited
 
 # master.menu.user-account ####################################################
 

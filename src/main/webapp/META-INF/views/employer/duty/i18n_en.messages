@@ -1,0 +1,12 @@
+employer.duty.job.form.label.referenceNumber = Reference Number
+employer.duty.job.form.label.title = Title
+employer.duty.job.form.label.description = Description
+employer.duty.job.form.label.salary = Salary
+
+employer.duty.list.label.title = Title 
+employer.duty.list.label.description = Description
+employer.duty.list.label.percentage = Percentage of work per week
+
+employer.duty.form.button.return = Return
+
+employer.duty.message.job = Duties' Job
