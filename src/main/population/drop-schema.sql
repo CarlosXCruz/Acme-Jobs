@@ -31,22 +31,6 @@
        drop 
        foreign key FK_6cyha9f1wpj0dpbxrrjddrqed;
 
-    alter table `message` 
-       drop 
-       foreign key `FKq851een84mnkrhyssa05q7je`;
-
-    alter table `message` 
-       drop 
-       foreign key `FKik4epe9dp5q6uenarfyia7xin`;
-
-    alter table `participa` 
-       drop 
-       foreign key `FK10eml2dvl5sxkas6wmq8l6lv9`;
-
-    alter table `participa` 
-       drop 
-       foreign key `FKqeth7xtvxhkh9pit38e23vf0j`;
-       
     alter table `duty` 
        drop 
        foreign key `FKs2uoxh4i5ya8ptyefae60iao1`;
@@ -67,9 +51,25 @@
        drop 
        foreign key `FKccrwleo6webtpabw26oblobch`;
 
+    alter table `message` 
+       drop 
+       foreign key `FKq851een84mnkrhyssa05q7je`;
+
+    alter table `message` 
+       drop 
+       foreign key `FKik4epe9dp5q6uenarfyia7xin`;
+
     alter table `non_commercial_banner` 
        drop 
        foreign key FK_2l8gpcwh19e7jj513or4r9dvb;
+
+    alter table `participa` 
+       drop 
+       foreign key `FK10eml2dvl5sxkas6wmq8l6lv9`;
+
+    alter table `participa` 
+       drop 
+       foreign key `FKqeth7xtvxhkh9pit38e23vf0j`;
 
     alter table `provider` 
        drop 
@@ -111,13 +111,13 @@
 
     drop table if exists `investor_record`;
 
-    drop table if exists `message`;
-
-    drop table if exists `message_thread`;
-    
     drop table if exists `job`;
 
     drop table if exists `job_application`;
+
+    drop table if exists `message`;
+
+    drop table if exists `message_thread`;
 
     drop table if exists `non_commercial_banner`;
 

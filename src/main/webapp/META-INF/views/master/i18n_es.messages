@@ -59,6 +59,9 @@ master.menu.authenticated.investorRecord.list = Lista de Registros de inversores
 # master.menu.authenticated.job #######################################################
 master.menu.authenticated.job.list = Lista de Trabajos
 
+# master.menu.authenticated.message-thread #######################################################
+master.menu.authenticated.message-thread.list = Hilos de Mensajes
+
 # master.menu.employer #######################################################
 master.menu.employer = Empleador
 master.menu.employer.job.list = Lista de Trabajos

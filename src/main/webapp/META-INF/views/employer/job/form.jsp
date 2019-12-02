@@ -16,6 +16,10 @@
 <a href = /acme-jobs/employer/duty/list?idJob=<jstl:out value="${id}"></jstl:out>>
 <acme:message code="employer.job.message.duties"/>
 </a>
+</br>
+<a href = /acme-jobs/authenticated/audit-record/list?idJob=<jstl:out value="${id}"></jstl:out>>
+<acme:message code="employer.job.message.audit-record"/>
+</a>
 <acme:form>
 <acme:form-return code="autheticated.job.form.button.return"/>
 </acme:form>

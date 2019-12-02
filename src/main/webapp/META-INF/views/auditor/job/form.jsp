@@ -13,6 +13,14 @@
 <acme:form-textarea code="auditor.job.form.label.description" path="description"/>
 </acme:form>
 
+<a href = /acme-jobs/auditor/duty/list?idJob=<jstl:out value="${id}"></jstl:out>>
+<acme:message code="employer.job.message.duties"/>
+</a>
+</br>
+<a href = /acme-jobs/authenticated/audit-record/list?idJob=<jstl:out value="${id}"></jstl:out>>
+<acme:message code="auditor.job.message.audit-record"/>
+</a>
+
 <acme:form>
-<acme:form-return code="auditor2.job.form.button.return"/>
+<acme:form-return code="auditor.job.form.button.return"/>
 </acme:form>

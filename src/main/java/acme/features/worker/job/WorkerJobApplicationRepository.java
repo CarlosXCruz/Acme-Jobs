@@ -1,5 +1,5 @@
 
-package acme.features.worker;
+package acme.features.worker.job;
 
 import java.util.Collection;
 

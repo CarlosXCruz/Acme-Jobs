@@ -10,3 +10,6 @@ autheticated.job.form.label.salary = Salary
 autheticated.job.form.label.moreInfo = More Info
 autheticated.job.form.label.description = Description
 autheticated.job.form.button.return = Return
+
+authenticated.job.message.duties = See the Duties of the Job
+authenticated.job.message.audit-record = See the Audit Records of the Job
