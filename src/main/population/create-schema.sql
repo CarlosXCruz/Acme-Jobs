@@ -23,6 +23,18 @@
         primary key (`id`)
     ) engine=InnoDB;
 
+    create table `audit_record` (
+       `id` integer not null,
+        `version` integer not null,
+        `body` varchar(255),
+        `moment` datetime(6),
+        `status` varchar(255),
+        `title` varchar(255),
+        `auditor_id` integer not null,
+        `job_id` integer not null,
+        primary key (`id`)
+    ) engine=InnoDB;
+
     create table `auditor` (
        `id` integer not null,
         `version` integer not null,
@@ -252,6 +264,7 @@
 
     insert into `hibernate_sequence` values ( 1 );
 create index IDXnhikaa2dj3la6o2o7e9vo01y0 on `announcement` (`moment`);
+create index IDXrc4ws05g8xybytvf60fgv6o5m on `audit_record` (`moment`);
 create index IDXnr284tes3x8hnd3h716tmb3fr on `challenge` (`deadline`);
 create index IDX9pkce3d1y6w47wadap5s5xptc on `company_record` (`stars`);
 create index IDXk2t3uthe649ao1jllcuks0gv4 on `investor_record` (`stars`);
@@ -282,6 +295,16 @@ create index IDXlrvsw21ylkdqa1shrkwg1yssx on `request` (`deadline`);
        add constraint FK_6lnbc6fo3om54vugoh8icg78m 
        foreign key (`user_account_id`) 
        references `user_account` (`id`);
+
+    alter table `audit_record` 
+       add constraint `FKdcrrgv6rkfw2ruvdja56un4ji` 
+       foreign key (`auditor_id`) 
+       references `auditor` (`id`);
+
+    alter table `audit_record` 
+       add constraint `FKlbvbyimxf6pxvbhkdd4vfhlnd` 
+       foreign key (`job_id`) 
+       references `job` (`id`);
 
     alter table `auditor` 
        add constraint FK_clqcq9lyspxdxcp6o4f3vkelj 

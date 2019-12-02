@@ -124,6 +124,12 @@ master.menu.sponsor = Sponsor
 master.menu.sponsor.commercialBanner = Commercial Banner List
 master.menu.sponsor.nonCommercialBanner = Non Commercial Banner List
 
+# master.menu.auditor ##########################################################
+
+master.menu.auditor = Auditor
+master.menu.auditor.jobAudited = Job audited
+master.menu.auditor.jobNoAudited = Job No audited
+
 # master.menu.user-account ####################################################
 
 master.menu.user-account = Account

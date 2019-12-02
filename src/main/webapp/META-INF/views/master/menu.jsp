@@ -105,7 +105,17 @@
 			<acme:menu-suboption code="master.menu.sponsor.commercialBanner" action="/sponsor/commercial-banner/list_mine"/>
 			<acme:menu-suboption code="master.menu.sponsor.nonCommercialBanner" action="/sponsor/non-commercial-banner/list_mine"/>
 		</acme:menu-option>
+		
+		<acme:menu-option code="master.menu.auditor" access="hasRole('Auditor')">
+			
+			<acme:menu-suboption code="master.menu.auditor.jobAudited" action="/auditor/jobAudited/list"/>
+			<acme:menu-suboption code="master.menu.auditor.jobNoAudited" action="/auditor/jobNoAudited/list"/>
+			
+		</acme:menu-option>
+		
 	</acme:menu-left>
+	
+	
 
 	<acme:menu-right>
 		<acme:menu-option code="master.menu.sign-up" action="/anonymous/user-account/create" access="isAnonymous()"/>
