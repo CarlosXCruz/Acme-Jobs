@@ -1,7 +1,8 @@
 autheticated.messagethread.list.label.title = Titulo
-autheticated.messagethread.list.label.users = Usuarios
+autheticated.messagethread.list.label.creationMoment = Momento de Creación
+#habría que poner users
 
 autheticated.messagethread.form.label.title = Titulo
 autheticated.messagethread.form.label.creationMoment = Momento de Creación
-autheticated.messagethread.form.label.users = Usuarios
+#autheticated.messagethread.form.label.users = Usuarios
 autheticated.messagethread.form.button.return = Volver

@@ -48,7 +48,7 @@ public class AuthenticatedMessageThreadListService implements AbstractListServic
 		Principal principal;
 
 		principal = request.getPrincipal();
-		result = this.repository.findManyByAuthenticatedId(principal.getActiveRoleId());
+		result = this.repository.findThreadByUser(principal.getActiveRoleId());
 
 		return result;
 	}

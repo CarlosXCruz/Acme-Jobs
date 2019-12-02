@@ -67,6 +67,7 @@ master.menu.anonymous.announcements.list = Lista de Anuncios
 # master.menu.authenticated.announcements #######################################################
 master.menu.authenticated.announcements.list = Lista de Anuncios
 
+master.menu.authenticated.message.list = Mensajes
 master.menu.authenticated.messagethread.list = Hilos de Mensajes
 
 # master.menu.administrator ###################################################

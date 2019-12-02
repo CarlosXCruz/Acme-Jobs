@@ -19,6 +19,6 @@ public interface AuthenticatedMessageThreadRepository extends AbstractRepository
 	Collection<MessageThread> findManyByAuthenticatedId(int userId);
 
 	@Query("select p.thread from Participa p where p.user.id = ?1")
-	MessageThread findThreadByUser(int userId);
+	Collection<MessageThread> findThreadByUser(int userId);
 
 }
