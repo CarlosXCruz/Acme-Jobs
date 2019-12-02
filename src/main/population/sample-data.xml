@@ -508,21 +508,21 @@
 		<property name="userAccount" ref="SponsorUserAccount2" />
 	</bean>
 
-	<bean name="Auditor1UserAccount" class="acme.framework.entities.UserAccount">
+	<bean name="Auditor01UserAccount" class="acme.framework.entities.UserAccount">
 		<property name="username" value="auditor1" />
 		<property name="password" value="auditor1" />
 		<property name="enabled" value="true" />
 		<property name="identity">
-			<bean class="acme.datatypes.UserIdentity">
+				<bean class="acme.datatypes.UserIdentity">
 				<property name="name" value="Audii" />
 				<property name="surname" value="Thor" />
 				<property name="email" value="audii.thor@acme.com" />
-			</bean>
+				</bean>
 		</property>
 		<property name="roles">
 			<list>
 				<ref bean = "Auditor01"/>
-				<ref bean="Auditor1Authenticated" />
+				<ref bean="Auditor01Authenticated" />
 			</list>
 		</property>
 	</bean>
@@ -530,12 +530,27 @@
 	<bean id = "Auditor01" class = "acme.entities.roles.Auditor">
 	<property name = "firm" value = "auditor1"/>
 	<property name = "statement" value = "auditor1"/>
-	<property name = "userAccount" ref = "Auditor1UserAccount"/>
+	<property name = "userAccount" ref = "Auditor01UserAccount"/>
 	</bean>
 	
-	<bean name = "Auditor1Authenticated" class = "acme.framework.entities.Authenticated">
-	<property name = "userAccount" ref = "Auditor1UserAccount"></property>
+	<bean name = "Auditor01Authenticated" class = "acme.framework.entities.Authenticated">
+	<property name = "userAccount" ref = "Auditor01UserAccount"></property>
 	</bean>
+	
+	<bean id="AuditRecord01" class="acme.entities.auditRecord.AuditRecord">
+		<property name="title" value="Prueba" />
+		<property name="moment" value="2019/11/02 10:00" />
+		<property name="body" value="prueba"/>
+		<property name="status" value="published"/>
+		<property name="auditor">
+				<ref bean = "Auditor01"/>
+		</property>
+		<property name="job">
+				<ref bean = "job02"/>
+		</property>
+	</bean>
+	
+	
 	
 
 </beans>
