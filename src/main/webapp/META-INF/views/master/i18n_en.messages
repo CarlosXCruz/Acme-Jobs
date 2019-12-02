@@ -67,6 +67,8 @@ master.menu.anonymous.announcements.list = List Announcements
 # master.menu.authenticated.announcements #######################################################
 master.menu.authenticated.announcements.list = List Announcements
 
+master.menu.authenticated.messagethread.list = Message Threads
+
 # master.menu.administrator ###################################################
 
 master.menu.administrator = Administrator

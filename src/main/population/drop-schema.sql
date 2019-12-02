@@ -15,6 +15,22 @@
        drop 
        foreign key FK_6cyha9f1wpj0dpbxrrjddrqed;
 
+    alter table `message` 
+       drop 
+       foreign key `FKq851een84mnkrhyssa05q7je`;
+
+    alter table `message` 
+       drop 
+       foreign key `FKik4epe9dp5q6uenarfyia7xin`;
+
+    alter table `participa` 
+       drop 
+       foreign key `FK10eml2dvl5sxkas6wmq8l6lv9`;
+
+    alter table `participa` 
+       drop 
+       foreign key `FKqeth7xtvxhkh9pit38e23vf0j`;
+
     alter table `provider` 
        drop 
        foreign key FK_b1gwnjqm6ggy9yuiqm0o4rlmd;
@@ -39,9 +55,15 @@
 
     drop table if exists `investor_record`;
 
+    drop table if exists `message`;
+
+    drop table if exists `message_thread`;
+
     drop table if exists `non_commercial_banner`;
 
     drop table if exists `offer`;
+
+    drop table if exists `participa`;
 
     drop table if exists `provider`;
 
