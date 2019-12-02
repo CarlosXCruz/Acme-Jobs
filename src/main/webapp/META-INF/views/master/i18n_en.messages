@@ -58,6 +58,8 @@ master.menu.authenticated.request.list = List Requests
 # master.menu.authenticated.job #######################################################
 master.menu.authenticated.job.list = List Jobs
 
+# master.menu.authenticated.message-thread #######################################################
+master.menu.authenticated.message-thread.list = Message Threads
 
 # master.menu.employer#######################################################
 master.menu.employer = Employer

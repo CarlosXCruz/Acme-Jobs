@@ -1,5 +1,5 @@
 
-package acme.features.auditor.jobNoAudited;
+package acme.features.auditor.job;
 
 import java.util.Collection;
 
@@ -14,10 +14,10 @@ import acme.framework.entities.Principal;
 import acme.framework.services.AbstractListService;
 
 @Service
-public class AuditorJobNoAuditedListService implements AbstractListService<Auditor, Job> {
+public class AuditorJobListNoAuditedService implements AbstractListService<Auditor, Job> {
 
 	@Autowired
-	AuditorJobNoAuditedRepository repository;
+	AuditorJobRepository repository;
 
 
 	@Override

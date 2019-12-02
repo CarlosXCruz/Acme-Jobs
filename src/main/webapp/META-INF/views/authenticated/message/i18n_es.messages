@@ -7,3 +7,7 @@ autheticated.message.form.label.body = Cuerpo
 autheticated.message.form.label.tags = Tags
 autheticated.message.form.label.user = Usuario
 autheticated.message.form.button.return = Volver
+
+autheticated.message.form.label.user.userAccount.username = Nombre de Usuario del creador
+autheticated.message.form.label.user.userAccount.identity.name = Nombre del creador
+autheticated.message.form.label.user.userAccount.identity.surname = Apellidos del creador

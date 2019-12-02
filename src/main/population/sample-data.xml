@@ -566,7 +566,6 @@
 		<property name="roles">
 			<list>
 				<ref bean="Authenticated1" />
-				<ref bean="AuthenticatedAuthenticated1" />
 			</list>
 		</property>
 	</bean>
@@ -575,10 +574,6 @@
 		<property name="userAccount" ref="AuthenticatedUserAccount1" />
 	</bean>
 
-	<bean id="AuthenticatedAuthenticated1" class="acme.framework.entities.Authenticated">
-		<property name="userAccount" ref="AuthenticatedUserAccount1" />
-	</bean>
-	
 	<!-- ........................................................................................ -->
 	
 	<bean id="AuthenticatedUserAccount2" class="acme.framework.entities.UserAccount">
@@ -595,7 +590,6 @@
 		<property name="roles">
 			<list>
 				<ref bean="Authenticated2" />
-				<ref bean="AuthenticatedAuthenticated2" />
 			</list>
 		</property>
 	</bean>
@@ -604,9 +598,7 @@
 		<property name="userAccount" ref="AuthenticatedUserAccount2" />
 	</bean>
 
-	<bean id="AuthenticatedAuthenticated2" class="acme.framework.entities.Authenticated">
-		<property name="userAccount" ref="AuthenticatedUserAccount2" />
-	</bean>
+	
 	
 	
 	

@@ -1,5 +1,5 @@
 
-package acme.features.auditor.jobNoAudited;
+package acme.features.authenticated.auditrecord;
 
 import javax.annotation.PostConstruct;
 
@@ -7,20 +7,20 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
 
-import acme.entities.jobs.Job;
-import acme.entities.roles.Auditor;
+import acme.entities.auditRecord.AuditRecord;
 import acme.framework.components.BasicCommand;
 import acme.framework.controllers.AbstractController;
+import acme.framework.entities.Authenticated;
 
 @Controller
-@RequestMapping("/auditor/jobNoAudited/")
-public class AuditorJobNoAuditedController extends AbstractController<Auditor, Job> {
+@RequestMapping("/authenticated/audit-record/")
+public class AuthenticatedAuditRecordController extends AbstractController<Authenticated, AuditRecord> {
 
 	@Autowired
-	private AuditorJobNoAuditedListService	listService;
+	private AuthenticatedAuditRecordListService	listService;
 
 	@Autowired
-	private AuditorJobNoAuditedShowService	showService;
+	private AuthenticatedAuditRecordShowService	showService;
 
 
 	@PostConstruct
@@ -28,5 +28,4 @@ public class AuditorJobNoAuditedController extends AbstractController<Auditor, J
 		super.addBasicCommand(BasicCommand.LIST, this.listService);
 		super.addBasicCommand(BasicCommand.SHOW, this.showService);
 	}
-
 }

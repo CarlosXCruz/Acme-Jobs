@@ -10,6 +10,7 @@ import acme.entities.messages.MessageThread;
 import acme.framework.components.Model;
 import acme.framework.components.Request;
 import acme.framework.entities.Authenticated;
+import acme.framework.entities.Principal;
 import acme.framework.services.AbstractListService;
 
 @Service
@@ -44,10 +45,11 @@ public class AuthenticatedMessageThreadListService implements AbstractListServic
 		assert request != null;
 
 		Collection<MessageThread> result;
-		//Principal principal;
+		Principal principal;
 
-		//principal = request.getPrincipal();
-		result = this.repository.findManyAll();
+		principal = request.getPrincipal();
+		int idAuth = principal.getActiveRoleId();
+		result = this.repository.findThreadByUser(idAuth);
 
 		return result;
 	}

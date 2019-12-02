@@ -36,18 +36,15 @@ public class AuthenticatedMessageListService implements AbstractListService<Auth
 		assert entity != null;
 		assert model != null;
 
-		request.unbind(entity, model, "title", "tags");
+		request.unbind(entity, model, "title", "tags", "user.userAccount.username");
 	}
 
 	@Override
 	public Collection<Message> findMany(final Request<Message> request) {
 		assert request != null;
-
 		Collection<Message> result;
-		//Principal principal;
-
-		//principal = request.getPrincipal();
-		result = this.repository.findManyAll();
+		int IdThread = request.getModel().getInteger("idThread");
+		result = this.repository.findMessagesFromThread(IdThread);
 
 		return result;
 	}
