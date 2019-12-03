@@ -27,7 +27,6 @@ public class JobApplication extends DomainEntity {
 
 	@NotBlank
 	@Length(min = 5, max = 15)
-	@Pattern(regexp = "^[a-zA-Z]{4}-[a-zA-Z]{4}:[a-zA-Z]{4}$")
 	@Column(unique = true)
 	private String				referenceNumber;
 
@@ -39,12 +38,15 @@ public class JobApplication extends DomainEntity {
 	private String				status;
 
 	@NotBlank
+	@Column(length = 1024)
 	private String				statement;
 
 	@NotBlank
+	@Column(length = 1024)
 	private String				skills;
 
 	@NotBlank
+	@Column(length = 1024)
 	private String				qualifications;
 
 	@NotNull

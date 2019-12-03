@@ -23,6 +23,14 @@
        drop 
        foreign key FK_h52w0f3wjoi68b63wv9vwon57;
 
+    alter table `authenticated_message_thread` 
+       drop 
+       foreign key `FKhvu9g2iuqsx6gafs5krdpmyn7`;
+
+    alter table `authenticated_message_thread` 
+       drop 
+       foreign key `FKoty5ev3qmyc4tvvf90prwyb8s`;
+
     alter table `commercial_banner` 
        drop 
        foreign key FK_q9id3wc65gg49afc5tlr1c00n;
@@ -63,14 +71,6 @@
        drop 
        foreign key FK_2l8gpcwh19e7jj513or4r9dvb;
 
-    alter table `participa` 
-       drop 
-       foreign key `FK10eml2dvl5sxkas6wmq8l6lv9`;
-
-    alter table `participa` 
-       drop 
-       foreign key `FKqeth7xtvxhkh9pit38e23vf0j`;
-
     alter table `provider` 
        drop 
        foreign key FK_b1gwnjqm6ggy9yuiqm0o4rlmd;
@@ -94,6 +94,8 @@
     drop table if exists `auditor`;
 
     drop table if exists `authenticated`;
+
+    drop table if exists `authenticated_message_thread`;
 
     drop table if exists `challenge`;
 
@@ -122,8 +124,6 @@
     drop table if exists `non_commercial_banner`;
 
     drop table if exists `offer`;
-
-    drop table if exists `participa`;
 
     drop table if exists `provider`;
 
