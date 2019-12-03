@@ -5,7 +5,8 @@
 
 
 <acme:list readonly="true">
+    <acme:list-column code="authenticated.duty.list.label.job.title" path="job.title" width="20%"/>
 	<acme:list-column code="authenticated.duty.list.label.title" path="title" width="20%"/>
-	<acme:list-column code="authenticated.duty.list.label.description" path="description" width="40%"/>
-	<acme:list-column code="authenticated.duty.list.label.percentage" path="percentage" width="40%"/>
+	<acme:list-column code="authenticated.duty.list.label.description" path="description" width="30%"/>
+	<acme:list-column code="authenticated.duty.list.label.percentage" path="percentage" width="30%"/>
 </acme:list>
