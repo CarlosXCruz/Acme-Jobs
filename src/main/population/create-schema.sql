@@ -51,6 +51,14 @@
         primary key (`id`)
     ) engine=InnoDB;
 
+    create table `authenticated_message_thread` (
+       `id` integer not null,
+        `version` integer not null,
+        `thread_id` integer not null,
+        `user_id` integer not null,
+        primary key (`id`)
+    ) engine=InnoDB;
+
     create table `challenge` (
        `id` integer not null,
         `version` integer not null,
@@ -123,7 +131,7 @@
         `holder` varchar(255),
         primary key (`id`)
     ) engine=InnoDB;
-
+    
     create table `duty` (
        `id` integer not null,
         `version` integer not null,
@@ -157,7 +165,7 @@
        `id` integer not null,
         `version` integer not null,
         `deadline` datetime(6),
-        `description` varchar(255),
+        `description` varchar(1024),
         `more_info` varchar(255),
         `reference_number` varchar(255),
         `salary_amount` double precision,
@@ -172,10 +180,10 @@
        `id` integer not null,
         `version` integer not null,
         `creation_moment` datetime(6),
-        `qualifications` varchar(255),
+        `qualifications` varchar(1024),
         `reference_number` varchar(255),
-        `skills` varchar(255),
-        `statement` varchar(255),
+        `skills` varchar(1024),
+        `statement` varchar(1024),
         `status` varchar(255),
         `job_id` integer not null,
         `worker_id` integer not null,
@@ -185,7 +193,7 @@
     create table `message` (
        `id` integer not null,
         `version` integer not null,
-        `body` varchar(255),
+        `body` varchar(1024),
         `creation_moment` datetime(6),
         `tags` varchar(255),
         `title` varchar(255),
@@ -235,7 +243,7 @@
         `user_id` integer not null,
         primary key (`id`)
     ) engine=InnoDB;
-
+    
     create table `provider` (
        `id` integer not null,
         `version` integer not null,
@@ -299,6 +307,7 @@ create index IDXnr284tes3x8hnd3h716tmb3fr on `challenge` (`deadline`);
 
     alter table `commercial_banner` 
        add constraint UK_tnxlqvs5k2qohd925u32ycgps unique (`credit_card_id`);
+       
 create index IDX9pkce3d1y6w47wadap5s5xptc on `company_record` (`stars`);
 create index IDXk2t3uthe649ao1jllcuks0gv4 on `investor_record` (`stars`);
 
@@ -349,10 +358,15 @@ create index IDXlrvsw21ylkdqa1shrkwg1yssx on `request` (`deadline`);
        foreign key (`user_account_id`) 
        references `user_account` (`id`);
 
-    alter table `commercial_banner` 
-       add constraint `FKfp0yot74q1m8ofbclq3nlfidw` 
-       foreign key (`credit_card_id`) 
-       references `credit_card` (`id`);
+    alter table `authenticated_message_thread` 
+       add constraint `FKhvu9g2iuqsx6gafs5krdpmyn7` 
+       foreign key (`thread_id`) 
+       references `message_thread` (`id`);
+
+    alter table `authenticated_message_thread` 
+       add constraint `FKoty5ev3qmyc4tvvf90prwyb8s` 
+       foreign key (`user_id`) 
+       references `authenticated` (`id`);
 
     alter table `commercial_banner` 
        add constraint FK_q9id3wc65gg49afc5tlr1c00n 

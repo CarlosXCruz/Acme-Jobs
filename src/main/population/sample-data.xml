@@ -13,20 +13,20 @@
 	<bean id = "duty01" class = "acme.entities.jobs.Duty">
 	<property name = "title" value = "tituloooooo"/>
 	<property name = "description" value = "desc"/>
-	<property name = "percentage" value = "20.10"/>
+	<property name = "percentage" value = "100.00"/>
 	<property name = "job" ref = "job02"/>
 	</bean>
 	<bean id = "duty02" class = "acme.entities.jobs.Duty">
 	<property name = "title" value = "tituloooooo2"/>
 	<property name = "description" value = "desc2"/>
-	<property name = "percentage" value = "22.10"/>
+	<property name = "percentage" value = "25.00"/>
 	<property name = "job" ref = "job01"/>
 	</bean>
 	
 	<bean id = "duty03" class = "acme.entities.jobs.Duty">
 	<property name = "title" value = "tituloooooo3"/>
 	<property name = "description" value = "desc3"/>
-	<property name = "percentage" value = "23.10"/>
+	<property name = "percentage" value = "75.00"/>
 	<property name = "job" ref = "job01"/>
 	</bean>
 	
@@ -623,18 +623,18 @@
 		<property name="creationMoment" value="2016/04/05 00:06"/>
 	</bean>
 	
-	<!-- Participa -->
-	<bean id = "participa01" class = "acme.entities.messages.Participa">
+	<!-- Authenticated_MessageThread -->
+	<bean id = "Authenticated_MessageThread01" class = "acme.entities.messages.Authenticated_MessageThread">
 		<property name="user" ref="Authenticated2"/>
 		<property name="thread" ref="messageThread03"/>
 	</bean>
 	
-	<bean id = "participa02" class = "acme.entities.messages.Participa">
+	<bean id = "Authenticated_MessageThread02" class = "acme.entities.messages.Authenticated_MessageThread">
 		<property name="user" ref="Authenticated2"/>
 		<property name="thread" ref="messageThread02"/>
 	</bean>
 	
-	<bean id = "participa03" class = "acme.entities.messages.Participa">
+	<bean id = "Authenticated_MessageThread03" class = "acme.entities.messages.Authenticated_MessageThread">
 		<property name="user" ref="Authenticated1"/>
 		<property name="thread" ref="messageThread01"/>
 	</bean>
@@ -664,7 +664,7 @@
 		<property name="title" value="message3"/>
 		<property name="creationMoment" value="2016/04/07 00:03"/>
 		<property name="tags" value="Pim, Pam, Pum"/>
-		<property name="body" value="This is the first message"/>
+		<property name="body" value="this is a message"/>
 		<property name="user" ref="Authenticated2"/>
 		<property name="thread" ref="messageThread02"/>
 	</bean>

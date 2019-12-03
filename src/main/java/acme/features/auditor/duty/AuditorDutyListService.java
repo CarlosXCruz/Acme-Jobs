@@ -37,7 +37,7 @@ public class AuditorDutyListService implements AbstractListService<Auditor, Duty
 		assert entity != null;
 		assert model != null;
 
-		request.unbind(entity, model, "title", "description", "percentage");
+		request.unbind(entity, model, "title", "description", "percentage", "job.title");
 
 	}
 

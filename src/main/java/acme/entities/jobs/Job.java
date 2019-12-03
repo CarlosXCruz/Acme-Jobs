@@ -50,9 +50,11 @@ public class Job extends DomainEntity {
 	private Money				salary;
 
 	@URL
+
 	private String				moreInfo;
 
 	@NotBlank
+	@Column(length = 1024)
 	private String				description;
 
 	@NotNull

@@ -1,5 +1,6 @@
 autheticated.message.list.label.title = Title
 autheticated.message.list.label.tags = Tags
+autheticated.message.list.label.username = Username
 
 autheticated.message.form.label.title = Title
 autheticated.message.form.label.creationMoment = Creation Moment
