@@ -33,6 +33,10 @@
 
     alter table `commercial_banner` 
        drop 
+       foreign key `FKfp0yot74q1m8ofbclq3nlfidw`;
+
+    alter table `commercial_banner` 
+       drop 
        foreign key FK_q9id3wc65gg49afc5tlr1c00n;
 
     alter table `consumer` 
@@ -77,6 +81,10 @@
 
     alter table `sponsor` 
        drop 
+       foreign key `FK28mvxtnmfjcwiw34vs8ryqkpa`;
+
+    alter table `sponsor` 
+       drop 
        foreign key FK_20xk0ev32hlg96kqynl6laie2;
 
     alter table `worker` 
@@ -96,7 +104,7 @@
     drop table if exists `authenticated`;
 
     drop table if exists `authenticated_message_thread`;
-    
+
     drop table if exists `challenge`;
 
     drop table if exists `commercial_banner`;
@@ -108,7 +116,7 @@
     drop table if exists `consumer`;
 
     drop table if exists `credit_card`;
-    
+
     drop table if exists `duty`;
 
     drop table if exists `employer`;
@@ -126,7 +134,7 @@
     drop table if exists `non_commercial_banner`;
 
     drop table if exists `offer`;
-    
+
     drop table if exists `provider`;
 
     drop table if exists `request`;

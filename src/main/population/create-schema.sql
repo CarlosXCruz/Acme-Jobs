@@ -131,7 +131,7 @@
         `holder` varchar(255),
         primary key (`id`)
     ) engine=InnoDB;
-    
+
     create table `duty` (
        `id` integer not null,
         `version` integer not null,
@@ -236,14 +236,6 @@
         primary key (`id`)
     ) engine=InnoDB;
 
-    create table `participa` (
-       `id` integer not null,
-        `version` integer not null,
-        `thread_id` integer not null,
-        `user_id` integer not null,
-        primary key (`id`)
-    ) engine=InnoDB;
-    
     create table `provider` (
        `id` integer not null,
         `version` integer not null,
@@ -307,7 +299,6 @@ create index IDXnr284tes3x8hnd3h716tmb3fr on `challenge` (`deadline`);
 
     alter table `commercial_banner` 
        add constraint UK_tnxlqvs5k2qohd925u32ycgps unique (`credit_card_id`);
-       
 create index IDX9pkce3d1y6w47wadap5s5xptc on `company_record` (`stars`);
 create index IDXk2t3uthe649ao1jllcuks0gv4 on `investor_record` (`stars`);
 
@@ -369,6 +360,11 @@ create index IDXlrvsw21ylkdqa1shrkwg1yssx on `request` (`deadline`);
        references `authenticated` (`id`);
 
     alter table `commercial_banner` 
+       add constraint `FKfp0yot74q1m8ofbclq3nlfidw` 
+       foreign key (`credit_card_id`) 
+       references `credit_card` (`id`);
+
+    alter table `commercial_banner` 
        add constraint FK_q9id3wc65gg49afc5tlr1c00n 
        foreign key (`sponsor_id`) 
        references `sponsor` (`id`);
@@ -417,16 +413,6 @@ create index IDXlrvsw21ylkdqa1shrkwg1yssx on `request` (`deadline`);
        add constraint FK_2l8gpcwh19e7jj513or4r9dvb 
        foreign key (`sponsor_id`) 
        references `sponsor` (`id`);
-
-    alter table `participa` 
-       add constraint `FK10eml2dvl5sxkas6wmq8l6lv9` 
-       foreign key (`thread_id`) 
-       references `message_thread` (`id`);
-
-    alter table `participa` 
-       add constraint `FKqeth7xtvxhkh9pit38e23vf0j` 
-       foreign key (`user_id`) 
-       references `authenticated` (`id`);
 
     alter table `provider` 
        add constraint FK_b1gwnjqm6ggy9yuiqm0o4rlmd 
