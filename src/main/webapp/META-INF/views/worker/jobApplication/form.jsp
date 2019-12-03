@@ -10,6 +10,12 @@
 <acme:form-textarea code="worker.jobApplication.form.label.statement" path="statement"/>
 <acme:form-textarea code="worker.jobApplication.form.label.skills" path="skills"/>
 <acme:form-textarea code="worker.jobApplication.form.label.qualifications" path="qualifications"/>
+</acme:form>
 
+<a href = /acme-jobs/authenticated/job/show?id=<jstl:out value="${job.id}"></jstl:out>>
+<acme:message code="worker.job.message.job"/>
+</a>
+
+<acme:form>
 <acme:form-return code="autheticated.jobApplication.form.button.return"/>
 </acme:form>

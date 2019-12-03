@@ -8,6 +8,6 @@ worker.jobApplication.form.label.status = Status
 worker.jobApplication.form.label.statement = Statement
 worker.jobApplication.form.label.skills = Skills
 worker.jobApplication.form.label.qualifications = Qualifications
-worker.jobApplication.message.job = See more information about the job
+worker.job.message.job = See the Job Applied
 
 autheticated.jobApplication.form.button.return = Return

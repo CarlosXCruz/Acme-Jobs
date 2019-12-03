@@ -13,20 +13,20 @@
 	<bean id = "duty01" class = "acme.entities.jobs.Duty">
 	<property name = "title" value = "tituloooooo"/>
 	<property name = "description" value = "desc"/>
-	<property name = "percentage" value = "20.10"/>
+	<property name = "percentage" value = "100.00"/>
 	<property name = "job" ref = "job02"/>
 	</bean>
 	<bean id = "duty02" class = "acme.entities.jobs.Duty">
 	<property name = "title" value = "tituloooooo2"/>
 	<property name = "description" value = "desc2"/>
-	<property name = "percentage" value = "22.10"/>
+	<property name = "percentage" value = "25.00"/>
 	<property name = "job" ref = "job01"/>
 	</bean>
 	
 	<bean id = "duty03" class = "acme.entities.jobs.Duty">
 	<property name = "title" value = "tituloooooo3"/>
 	<property name = "description" value = "desc3"/>
-	<property name = "percentage" value = "23.10"/>
+	<property name = "percentage" value = "75.00"/>
 	<property name = "job" ref = "job01"/>
 	</bean>
 	

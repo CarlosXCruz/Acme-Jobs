@@ -8,6 +8,7 @@ employer.jobApplication.form.label.status = Status
 employer.jobApplication.form.label.statement = Statement
 employer.jobApplication.form.label.skills = Skills
 employer.jobApplication.form.label.qualifications = Qualifications
-worker.jobApplication.message.job = See more information about the job
+employer.job.message.job = See The Job Applied
+
 
 autheticated.jobApplication.form.button.return = Return

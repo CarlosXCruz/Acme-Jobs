@@ -8,6 +8,6 @@ employer.jobApplication.form.label.status = Estado
 employer.jobApplication.form.label.statement = Declaracion
 employer.jobApplication.form.label.skills = Habilidades
 employer.jobApplication.form.label.qualifications = Titulos
-worker.jobApplication.message.job = Ver mas información del trabajo
+employer.job.message.job = Ver el trabajo solicitado
 
 autheticated.jobApplication.form.button.return = Volver
