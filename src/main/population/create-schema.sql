@@ -84,12 +84,7 @@
         `slogan` varchar(255),
         `targeturl` varchar(255),
         `sponsor_id` integer not null,
-        `brand` varchar(255),
-        `card_number` varchar(255),
-        `cvv` integer not null,
-        `expiration_month` integer not null,
-        `expiration_year` integer not null,
-        `holder` varchar(255),
+        `credit_card_id` integer not null,
         primary key (`id`)
     ) engine=InnoDB;
 
@@ -125,6 +120,18 @@
         primary key (`id`)
     ) engine=InnoDB;
 
+    create table `credit_card` (
+       `id` integer not null,
+        `version` integer not null,
+        `brand` varchar(255),
+        `card_number` varchar(255),
+        `cvv` integer not null,
+        `expiration_month` integer not null,
+        `expiration_year` integer not null,
+        `holder` varchar(255),
+        primary key (`id`)
+    ) engine=InnoDB;
+    
     create table `duty` (
        `id` integer not null,
         `version` integer not null,
@@ -229,6 +236,14 @@
         primary key (`id`)
     ) engine=InnoDB;
 
+    create table `participa` (
+       `id` integer not null,
+        `version` integer not null,
+        `thread_id` integer not null,
+        `user_id` integer not null,
+        primary key (`id`)
+    ) engine=InnoDB;
+    
     create table `provider` (
        `id` integer not null,
         `version` integer not null,
@@ -255,13 +270,8 @@
        `id` integer not null,
         `version` integer not null,
         `user_account_id` integer,
-        `brand` varchar(255),
-        `card_number` varchar(255),
-        `cvv` integer not null,
-        `expiration_month` integer not null,
-        `expiration_year` integer not null,
-        `holder` varchar(255),
         `organisation_name` varchar(255),
+        `credit_card_id` integer,
         primary key (`id`)
     ) engine=InnoDB;
 
@@ -294,6 +304,10 @@
 create index IDXnhikaa2dj3la6o2o7e9vo01y0 on `announcement` (`moment`);
 create index IDXrc4ws05g8xybytvf60fgv6o5m on `audit_record` (`moment`);
 create index IDXnr284tes3x8hnd3h716tmb3fr on `challenge` (`deadline`);
+
+    alter table `commercial_banner` 
+       add constraint UK_tnxlqvs5k2qohd925u32ycgps unique (`credit_card_id`);
+       
 create index IDX9pkce3d1y6w47wadap5s5xptc on `company_record` (`stars`);
 create index IDXk2t3uthe649ao1jllcuks0gv4 on `investor_record` (`stars`);
 
@@ -404,10 +418,25 @@ create index IDXlrvsw21ylkdqa1shrkwg1yssx on `request` (`deadline`);
        foreign key (`sponsor_id`) 
        references `sponsor` (`id`);
 
+    alter table `participa` 
+       add constraint `FK10eml2dvl5sxkas6wmq8l6lv9` 
+       foreign key (`thread_id`) 
+       references `message_thread` (`id`);
+
+    alter table `participa` 
+       add constraint `FKqeth7xtvxhkh9pit38e23vf0j` 
+       foreign key (`user_id`) 
+       references `authenticated` (`id`);
+
     alter table `provider` 
        add constraint FK_b1gwnjqm6ggy9yuiqm0o4rlmd 
        foreign key (`user_account_id`) 
        references `user_account` (`id`);
+
+    alter table `sponsor` 
+       add constraint `FK28mvxtnmfjcwiw34vs8ryqkpa` 
+       foreign key (`credit_card_id`) 
+       references `credit_card` (`id`);
 
     alter table `sponsor` 
        add constraint FK_20xk0ev32hlg96kqynl6laie2 

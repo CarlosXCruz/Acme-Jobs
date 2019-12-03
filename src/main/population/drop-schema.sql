@@ -96,7 +96,7 @@
     drop table if exists `authenticated`;
 
     drop table if exists `authenticated_message_thread`;
-
+    
     drop table if exists `challenge`;
 
     drop table if exists `commercial_banner`;
@@ -107,6 +107,8 @@
 
     drop table if exists `consumer`;
 
+    drop table if exists `credit_card`;
+    
     drop table if exists `duty`;
 
     drop table if exists `employer`;
@@ -124,7 +126,7 @@
     drop table if exists `non_commercial_banner`;
 
     drop table if exists `offer`;
-
+    
     drop table if exists `provider`;
 
     drop table if exists `request`;

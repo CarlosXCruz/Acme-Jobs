@@ -180,24 +180,13 @@
 	<property name = "skills" value = "skills"/>
 	<property name = "qualifications" value = "qsad"/>
 	<property name = "worker" ref = "worker01"/>
-	<property name = "job" ref = "job01"/>
+	<property name = "job" ref = "job02"/>
 	</bean>
 	
 	<bean id = "jobapp02" class = "acme.entities.jobApplication.JobApplication">
 	<property name = "referenceNumber" value = "EEEE-JJJJ:WWRR"/>
 	<property name = "creationMoment" value = "2019/10/21 10:00"/>
 	<property name = "status" value = "pending"/>
-	<property name = "statement" value = "afawfdbc"/>
-	<property name = "skills" value = "skilfawfals"/>
-	<property name = "qualifications" value = "qsafwafad"/>
-	<property name = "worker" ref = "worker02"/>
-	<property name = "job" ref = "job02"/>
-	</bean>
-	
-	<bean id = "jobapp03" class = "acme.entities.jobApplication.JobApplication">
-	<property name = "referenceNumber" value = "EEEE-JJJJ:WWTT"/>
-	<property name = "creationMoment" value = "2019/02/24 10:00"/>
-	<property name = "status" value = "accepted"/>
 	<property name = "statement" value = "afawfdbc"/>
 	<property name = "skills" value = "skilfawfals"/>
 	<property name = "qualifications" value = "qsafwafad"/>
@@ -394,6 +383,18 @@
 		<property name="slogan" value="Slogan del banner comercial 01" />
 		<property name="targeturl" value="http://www.targerurl01.com" />
 		<property name="sponsor" ref="Sponsor1" />
+		<property name="creditCard" ref="creditcard01"/>
+	</bean>
+
+	<bean id="commercialbanner02" class="acme.entities.banners.CommercialBanner">
+		<property name="imageurl" value="http://www.imagenes1.com" />
+		<property name="slogan" value="Slogan del banner comercial 02" />
+		<property name="targeturl" value="http://www.targerurl01.com" />
+		<property name="sponsor" ref="Sponsor2" />
+		<property name="creditCard" ref="creditcard02"/>
+	</bean>
+	
+	<bean id="creditcard01" class="acme.entities.banners.CreditCard">
 		<property name="cardNumber" value="4376925573423858" />
 		<property name="holder" value="Paco Diaz" />
 		<property name="cvv" value="900" />
@@ -402,11 +403,7 @@
 		<property name="expirationYear" value="2019" />
 	</bean>
 
-	<bean id="commercialbanner02" class="acme.entities.banners.CommercialBanner">
-		<property name="imageurl" value="http://www.imagenes1.com" />
-		<property name="slogan" value="Slogan del banner comercial 02" />
-		<property name="targeturl" value="http://www.targerurl01.com" />
-		<property name="sponsor" ref="Sponsor2" />
+	<bean id="creditcard02" class="acme.entities.banners.CreditCard">
 		<property name="cardNumber" value="4465307888273140" />
 		<property name="holder" value="Paco Diaz" />
 		<property name="cvv" value="992" />
@@ -461,13 +458,17 @@
 
 	<bean id="Sponsor1" class="acme.entities.roles.Sponsor">
 		<property name="organisationName" value="Organisation Sponsor 1, Inc." />
+		<property name="userAccount" ref="SponsorUserAccount1" />
+		<property name="creditCard" ref="creditcard03"/>
+	</bean>
+	
+	<bean id="creditcard03" class="acme.entities.banners.CreditCard">
 		<property name="cardNumber" value="4123082495348825" />
 		<property name="holder" value="Elizabeth Hernandez" />
 		<property name="cvv" value="321" />
 		<property name="brand" value="Visa" />
 		<property name="expirationMonth" value="06" />
 		<property name="expirationYear" value="2024" />
-		<property name="userAccount" ref="SponsorUserAccount1" />
 	</bean>
 
 	<bean id="SponsorAuthenticated1" class="acme.framework.entities.Authenticated">
@@ -495,13 +496,17 @@
 
 	<bean id="Sponsor2" class="acme.entities.roles.Sponsor">
 		<property name="organisationName" value="Organisation Sponsor 2, Inc." />
+		<property name="userAccount" ref="SponsorUserAccount2" />
+		<property name="creditCard" ref="creditcard03"/>
+	</bean>
+	
+	<bean id="creditcard04" class="acme.entities.banners.CreditCard">
 		<property name="cardNumber" value="4940340389540035" />
 		<property name="holder" value="Juana Martínez" />
 		<property name="cvv" value="830" />
 		<property name="brand" value="Visa" />
 		<property name="expirationMonth" value="12" />
 		<property name="expirationYear" value="2022" />
-		<property name="userAccount" ref="SponsorUserAccount2" />
 	</bean>
 
 	<bean id="SponsorAuthenticated2" class="acme.framework.entities.Authenticated">
