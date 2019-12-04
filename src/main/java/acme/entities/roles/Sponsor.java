@@ -5,7 +5,6 @@ import javax.persistence.Entity;
 import javax.persistence.OneToOne;
 import javax.validation.Valid;
 import javax.validation.constraints.NotBlank;
-import javax.validation.constraints.NotNull;
 
 import acme.entities.banners.CreditCard;
 import acme.framework.entities.UserRole;
