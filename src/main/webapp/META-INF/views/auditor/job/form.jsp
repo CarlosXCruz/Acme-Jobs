@@ -13,11 +13,11 @@
 <acme:form-textarea code="auditor.job.form.label.description" path="description"/>
 </acme:form>
 
-<a href = app-48b914aa-d9d0-4c66-bf07-da88f4d7a1ba.cleverapps.io/auditor/duty/list?idJob=<jstl:out value="${id}"></jstl:out>>
+<a href = /auditor/duty/list?idJob=<jstl:out value="${id}"></jstl:out>>
 <acme:message code="employer.job.message.duties"/>
 </a>
 </br>
-<a href = app-48b914aa-d9d0-4c66-bf07-da88f4d7a1ba.cleverapps.io/authenticated/audit-record/list?idJob=<jstl:out value="${id}"></jstl:out>>
+<a href = /authenticated/audit-record/list?idJob=<jstl:out value="${id}"></jstl:out>>
 <acme:message code="auditor.job.message.audit-record"/>
 </a>
 

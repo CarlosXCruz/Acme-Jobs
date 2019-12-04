@@ -12,7 +12,7 @@
 <acme:form-textarea code="worker.jobApplication.form.label.qualifications" path="qualifications"/>
 </acme:form>
 
-<a href = app-48b914aa-d9d0-4c66-bf07-da88f4d7a1ba.cleverapps.io/authenticated/job/show?id=<jstl:out value="${job.id}"></jstl:out>>
+<a href = /authenticated/job/show?id=<jstl:out value="${job.id}"></jstl:out>>
 <acme:message code="worker.job.message.job"/>
 </a>
 

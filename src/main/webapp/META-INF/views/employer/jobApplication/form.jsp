@@ -13,7 +13,7 @@
 </acme:form>
 
 
-<a href = app-48b914aa-d9d0-4c66-bf07-da88f4d7a1ba.cleverapps.io/employer/job/show?id=<jstl:out value="${job.id}"></jstl:out>>
+<a href = /employer/job/show?id=<jstl:out value="${job.id}"></jstl:out>>
 <acme:message code="employer.job.message.job"/>
 </a>
 
